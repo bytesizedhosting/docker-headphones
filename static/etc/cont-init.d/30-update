@@ -1,0 +1,7 @@
+#!/usr/bin/with-contenv bash
+
+if [[ -d /app/headphones/.git ]];then
+ echo "Chowning apps and updating Headphones"
+ cd /app/headphones && git pull
+ chown -R bytesized:bytesized /app
+fi
